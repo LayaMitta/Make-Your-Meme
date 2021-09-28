@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    
+    <!--Script Files are included-->
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+   
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+    <!-- Popper JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+    <!-- Bootstrap JS -->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+    
+</head>
+
+<body>
+
+
+
+
+
+    <div class="content">
+        <h1>MAKE YOUR MEME</h1>
+        <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#loginModal">CreateMeme</button>
+        <button type="button" class="btn btn-outline-warning" onclick="location.href='gallery.html'">MemeGallery</button>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Login</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form action="FirstServlet" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Your username...">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="userpass" name="userpass" placeholder="Your password...">
+                            </div>
+                            <button type="submit" class="btn btn-outline-warning btn-block btn-round">Login</button>
+                        </form>
+
+                    </div>
+                    <br>
+                    <div class="signup-section">Not a member yet?
+                        <!--  <a href="#a" class="text-info" onclick="location.href='trial_signup.html'"> Sign Up</a>-->
+                        <button type="button" class="btn btn-outline-warning btn-round" data-toggle="modal" data-target="#signupModal">Sign Up</button>
+
+                    </div>
+                </div>
+            </div>
+            <!--<div class="modal-footer d-flex justify-content-center">
+				<div class="signup-section">Not a member yet? <a href="#a" class="text-info"> Sign Up</a>.</div>
+			</div> -->
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Sign Up</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form action="SignUp" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="userpass1" name="userpass" placeholder="Enter password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="userpass2" placeholder="Confirm password">
+                            </div>
+                            <button type="submit" class="btn btn-outline-warning  btn-round">Sign Up</button>
+                        </form>
+
+                    </div>
+                    <br>
+                    <div class="signup-section">Already a member?<a href="#a" class="btn btn-outline-warning  btn-round" onclick="location.href='index.html'"> Sign In</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <marquee direction="up" height="50px">
+
+        <p>Do you want to create your meme?<br>
+            Let's plunge right into the world of memes!<br>
+            Don't worry, we'll make things easy for you.</p>
+    </marquee>
+</body>
+
+</html>
